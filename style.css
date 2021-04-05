@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #17181a;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Abril Fatface", serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* HEADER */
+
+#logo {
+  color: #fff;
+}
+
+.nav-header {
+  min-height: 10vh;
+  font-size: 1rem;
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line1,
+.line2 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: #fff;
+  pointer-events: none;
+}
+
+/* MAIN BODY */
+
+.slide {
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #17181a;
+}
+
+.hero-img {
+  position: relative;
+  flex: 1 1 25rem;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 25rem;
+  padding-left: 5rem;
+  position: relative;
+}
+
+.street-span {
+  color: rgb(255, 139, 93);
+}
+
+.photography-span {
+  color: rgb(86, 124, 228);
+}
+
+.fashion-span {
+  color: rgb(167, 110, 231);
+}
+
+.hero-desc h2 {
+  font-size: 5rem;
+}
+
+.hero-desc p {
+  padding: 3rem 0;
+  font-size: 1.5rem;
+  color: rgb(223, 223, 223);
+}
+
+.explore {
+  padding: 1rem 2rem;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+/* NAV BAR */
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+
+.nav-bar a {
+  color: #000;
+}
+
+.burger {
+  cursor: pointer;
+}
+
+.nav-links {
+  font-size: 3rem;
+  flex-basis: 30rem;
+}
+
+.nav-links h3 {
+  padding: 3rem 0;
+}
+
+.contact {
+  flex-basis: 30rem;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+/* REVEAL EFFECTS */
+.reveal-img,
+.reveal-text {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: #17181a;
+  left: 0;
+  top: -15%;
+}
+
+/* CURSOR DECORATION */
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 300ms ease-in-out;
+  transition-property: background, transform;
+  transform-origin: 100% 110%;
+}
+
+.cursor.nav-active {
+  background: rgb(86, 124, 228);
+  transform: scale(2);
+}
+
+.cursor.explore-active {
+  background: #fff;
+  transform: scale(2);
+  color: #17181a;
+}
+
+.cursor-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 0.5rem;
+  transform: translate(-50%, -50%);
+}
+
+/* TEXT SWIPE ANIMATION */
+.title {
+  position: relative;
+  overflow: hidden;
+}
+
+.title-swipe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+}
+
+.t-swipe1 {
+  background: rgb(255, 139, 93);
+}
+
+.t-swipe2 {
+  background: rgb(86, 124, 228);
+}
+
+.t-swipe3 {
+  background: rgb(167, 110, 231);
+}
+
+/* Get rid of ScrollMagic pin spacer */
+/* Can press buttons outside of pin spacer area */
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
